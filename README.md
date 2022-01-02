@@ -1,20 +1,14 @@
-<p align="center">
-    <b><font size="20">GoalBot</font></b>
-</p>
-<p align="center">
-  <strong>Creating and managing goals made easy!</strong>
-</p>
-<p align="center">
-  <a href="https://discord.com/invite/bZt8WkS">
-    <img src="https://discord.com/api/guilds/98834803738054656/embed.png" alt="discord - users online"/>
-  </a>
-  <a href="https://github.com/ServerStats-INC/eris">
-    <img src="https://img.shields.io/badge/Eris-v0.16.1-blue.svg" alt="Eris Badge"/>
-  </a>
-  <a href="https://github.com/ServerStats-INC/ServerStatsBot">
-    <img src="https://img.shields.io/badge/Version-1.0.0-green.svg" alt="Version Badge"/>
-  </a>
-</p>
+<h1>GoalBot</h1>
+<strong>Creating and managing goals made easy!</strong><br>
+<a href="https://discord.com/invite/bZt8WkS">
+  <img src="https://discord.com/api/guilds/98834803738054656/embed.png" alt="discord - users online"/>
+</a>
+<a href="https://github.com/ServerStats-INC/eris">
+  <img src="https://img.shields.io/badge/Eris-v0.16.1-blue.svg" alt="Eris Badge"/>
+</a>
+<a href="https://github.com/ServerStats-INC/ServerStatsBot">
+  <img src="https://img.shields.io/badge/Version-1.0.0-green.svg" alt="Version Badge"/>
+</a>
 
 ---
 
@@ -28,7 +22,7 @@ This project has been created after a request from [Brasscoin](https://www.youtu
 ### **Required dependencies**
 [eris](https://www.npmjs.com/package/eris) - A Node.js wrapper for interfacing with Discord.\
 [mongoose](https://www.npmjs.com/package/mongoose) - A MongoDB object modeling tool designed to work in an asynchronous environment.\
-[asciiart-logo](https://www.npmjs.com/package/axios) - renders a splash screen in text console with logo from ASCII characters.
+[asciiart-logo](https://www.npmjs.com/package/asciiart-logo) - renders a splash screen in text console with logo from ASCII characters.
 
 ### **Optional dependencies**
 [bufferutil](https://www.npmjs.com/package/bufferutil) - Makes ws requests faster and adds some utilities to efficiently perform.\
@@ -41,29 +35,29 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 ---
 
 ## **Table of contents**
-**1\.** [Preparations](##Preparations)\
-&nbsp;&nbsp;&nbsp;&nbsp;**1\.1.** [Requirements](###Requirements)\
-&nbsp;&nbsp;&nbsp;&nbsp;**1\.2.** [Get code](###Get-code)
+**1\.** [Preparations](#preparations)\
+&nbsp;&nbsp;&nbsp;&nbsp;**1\.1.** [Requirements](#requirements)\
+&nbsp;&nbsp;&nbsp;&nbsp;**1\.2.** [Get code](#get-code)
 <br>
 
-**2\.** [Config](##Config)\
-&nbsp;&nbsp;&nbsp;&nbsp;**2\.1.** [Bot config](###Bot-config)\
-&nbsp;&nbsp;&nbsp;&nbsp;**2\.2.** [PM2 config](###PM2-config)
+**2\.** [Config](#config)\
+&nbsp;&nbsp;&nbsp;&nbsp;**2\.1.** [Bot config](#bot-config)\
+&nbsp;&nbsp;&nbsp;&nbsp;**2\.2.** [PM2 config](#pm2-config)
 <br>
 
-**3\.** [Linux](##Linux)\
-&nbsp;&nbsp;&nbsp;&nbsp;**3\.1.** [Update system (L)](###Update-system-(L))\
-&nbsp;&nbsp;&nbsp;&nbsp;**3\.2.** [Install Node.js (L)](###Install-Node.js-(L))\
-&nbsp;&nbsp;&nbsp;&nbsp;**3\.3.** [Install PM2 (L)](###Install-PM2-(L))\
-&nbsp;&nbsp;&nbsp;&nbsp;**3\.4.** [Install MongoDB (L)](###Install-MongoDB-(L))\
-&nbsp;&nbsp;&nbsp;&nbsp;**3\.5.** [Start the bot (L)](###Start-the-bot-(L))
+**3\.** [Linux](#linux)\
+&nbsp;&nbsp;&nbsp;&nbsp;**3\.1.** [Update system (L)](#update-system-l)\
+&nbsp;&nbsp;&nbsp;&nbsp;**3\.2.** [Install Node.js (L)](#install-nodejs-l)\
+&nbsp;&nbsp;&nbsp;&nbsp;**3\.3.** [Install PM2 (L)](#install-pm2-l)\
+&nbsp;&nbsp;&nbsp;&nbsp;**3\.4.** [Install MongoDB (L)](#install-mongodb-l)\
+&nbsp;&nbsp;&nbsp;&nbsp;**3\.5.** [Start the bot (L)](#start-the-bot-l)
 <br>
 
-**4\.** [Windows](##Windows)\
-&nbsp;&nbsp;&nbsp;&nbsp;**4\.1.** [Install Node.js (W)](###Install-Node.js-(W))\
-&nbsp;&nbsp;&nbsp;&nbsp;**4\.2.** [Install PM2 (W)](###Install-PM2-(W))\
-&nbsp;&nbsp;&nbsp;&nbsp;**4\.3.** [Install MongoDB (W)](###Install-MongoDB-(W))\
-&nbsp;&nbsp;&nbsp;&nbsp;**4\.4.** [Start the bot (W)](###Start-the-bot-(W))
+**4\.** [Windows](#windows)\
+&nbsp;&nbsp;&nbsp;&nbsp;**4\.1.** [Install Node.js (W)](#install-nodejs-w)\
+&nbsp;&nbsp;&nbsp;&nbsp;**4\.2.** [Install PM2 (W)](#install-pm2-w)\
+&nbsp;&nbsp;&nbsp;&nbsp;**4\.3.** [Install MongoDB (W)](#install-mongodb-w)\
+&nbsp;&nbsp;&nbsp;&nbsp;**4\.4.** [Start the bot (W)](#start-the-bot-w)
 
 ---
 

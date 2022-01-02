@@ -1,0 +1,13 @@
+{
+	"apps": [
+		{
+			"name": "GoalBot",
+			"script": "/root/GoalBot/src/index.js",
+			"cwd": "/root/GoalBot/src",
+			"instances": "1",
+			"exec_mode": "fork",
+			"max_memory_restart": "1G",
+			"autorestart": true
+		}
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"name": "goalbot",
+	"version": "1.0.0",
+	"description": "A small Discord bot created to create and manage any type of money goal and display them through messages",
+	"homepage": "https://github.com/ZixeSea/GoalBot",
+	"author": {
+		"name": "ZixeSea",
+		"email": "support@serverstatsbot.com",
+		"url": "https://serverstatsbot.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ZixeSea/GoalBot.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ZixeSea/GoalBot/issues"
+	},
+	"scripts": {
+		"start": "node ./src/start.js"
+	},
+	"main": "./src/start.js",
+	"engines": {
+		"node": ">=14.17.3"
+	},
+	"dependencies": {
+		"asciiart-logo": "^0.2.6",
+		"bufferutil": "^4.0.5",
+		"eris": "^0.16.1",
+		"eventemitter3": "^4.0.7",
+		"mongoose": "^6.0.13",
+		"pako": "^2.0.4"
+	}
+}

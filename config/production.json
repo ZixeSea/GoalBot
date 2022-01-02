@@ -1,0 +1,15 @@
+{
+	"bot": {
+		"token": "token here",
+		"modRole": [ "role(s)", "id", "here" ],
+		"guild": "guild id here"
+	},
+	"db": {
+		"db": "db here",
+		"host": "db host here",
+		"mongoOptions": {
+			"useNewUrlParser": true,
+			"useUnifiedTopology": true
+		}
+	}
+}

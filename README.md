@@ -120,7 +120,7 @@ Hereunder is an example config:
 You can find the config file in the folder that was created in the previous step (["this one"](###Get-code)).\
 
 In the PM2 config file there are only 2 things you should change to make sure PM2 can find the code and does are\
-`script` Should be the path to "src/index.js" (in windows use something like this: "c:\\GoalBot\\src\\index.js")\
+`script` Should be the path to "src/index.js" (in windows use something like this: "c:\\GoalBot\\src\\start.js")\
 `cwd` Should be the path to "src" folder (in windows use something like this: "c:\\GoalBot\\src")\
 
 Hereunder is an example config:
@@ -129,7 +129,7 @@ Hereunder is an example config:
 	"apps": [
 		{
 			"name": "GoalBot",
-			"script": "/root/GoalBot/src/index.js",
+			"script": "/root/GoalBot/src/start.js",
 			"cwd": "/root/GoalBot/src",
 			"instances": "1",
 			"exec_mode": "fork",
@@ -162,7 +162,7 @@ sudo apt install -y nodejs
 Run the following 2 commands in a terminal window to install **PM2**.
 ```
 sudo npm i pm2 -g
-pm2 startup ubuntu
+pm2 startup
 ```
 
 ### **Install MongoDB (L)**
@@ -179,7 +179,7 @@ sudo systemctl enable mongod
 Open the folder you downloaded in the previous step (["this one"](###Get-code)), and open a terminal window there and run the following 3 commands.
 ```
 npm i
-pm2 start app.json
+pm2 start pm2.json
 pm2 save
 ```
 
@@ -195,8 +195,7 @@ Installing **Node.js** on windows is really easy, they have a normal installer f
 ### **Install PM2 (W)**
 Run the following 2 commands in a CMD window to install **PM2**.
 ```
-sudo npm i pm2 -g
-pm2 startup
+npm i pm2 -g
 ```
 
 ### **Install MongoDB (W)**
@@ -210,7 +209,7 @@ Installing **MongoDB** on windows is really easy again, it's also a normal insta
 Open the folder you downloaded in the previous step (["this one"](###Get-code)), and open a CMD window there and run the following 3 commands.
 ```
 npm i
-pm2 start app.json
+pm2 start pm2.json
 pm2 save
 ```
 

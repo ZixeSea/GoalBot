@@ -5,7 +5,7 @@ module.exports = {
 			return interaction.createFollowup("You don't have to required role(s) to run the command.");
 
 		GoalBot.cmds.forEach((c) => {
-			GoalBot.Logger.console('Slash', `Edited ${c.slashJSON.name}, should now be up to date.`);
+			GoalBot.logger(GoalBot, `Edited ${c.slashJSON.name}, should now be up to date.`);
 			GoalBot.client.createGuildCommand(GoalBot.config.guild, c.slashJSON, 1);
 		});
 

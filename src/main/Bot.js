@@ -120,7 +120,7 @@ async function addSlashCommands() {
 
 	missingSlash.forEach((m) => {
 		this.logger(this, `Added ${m.slashJSON.name}, this slash command was missing.`);
-		this.client.createGuildCommand(this.config.mainServer, m.slashJSON, 1);
+		this.client.createGuildCommand(this.config.guild, m.slashJSON, 1);
 	});
 }
 

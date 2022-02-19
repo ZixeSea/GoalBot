@@ -1,5 +1,5 @@
 module.exports = {
-	run: async ({ interaction, cLatency }) => {
+	run: async ({ interaction, latency }) => {
 		const sLatency = Math.round(interaction.channel.guild.shard.latency);
 		interaction.createFollowup({
 			embeds: [
@@ -9,7 +9,7 @@ module.exports = {
 					fields: [
 						{
 							name: `Client latency`,
-							value: `\`\`\`${cLatency} MS\`\`\``,
+							value: `\`\`\`${latency} MS\`\`\``,
 							inline: true
 						},
 						{
@@ -22,5 +22,5 @@ module.exports = {
 			]
 		});
 	},
-	trigger: 'ping'
+	slashJSON: { name: 'ping', description: 'This will shows the latency for the client and the shard.' }
 };

@@ -20,5 +20,17 @@ module.exports = {
 					'warn'
 				);
 	},
-	trigger: 'deletegoal'
+	slashJSON: {
+		name: 'deletegoal',
+		description: 'Delete an existing goal',
+		options: [
+			{
+				name: 'name',
+				description: 'The name from the goal',
+				type: 3,
+				required: true,
+				focused: false
+			}
+		]
+	}
 };

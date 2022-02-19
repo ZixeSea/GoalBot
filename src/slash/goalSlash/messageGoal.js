@@ -39,5 +39,24 @@ module.exports = {
 			interaction.createFollowup(`there is already a message for the goal named **${goalName}**.`);
 		}
 	},
-	trigger: 'messagegoal'
+	slashJSON: {
+		name: 'messagegoal',
+		description: 'Show info baout a goal',
+		options: [
+			{
+				name: 'name',
+				description: 'The name from the goal',
+				type: 3,
+				required: true,
+				focused: false
+			},
+			{
+				name: 'channel',
+				description: 'Channel to create the message in',
+				type: 7,
+				required: true,
+				focused: false
+			}
+		]
+	}
 };

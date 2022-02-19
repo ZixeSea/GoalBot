@@ -42,7 +42,26 @@ module.exports = {
 
 		updateGoalMessage(interaction, doesExist, updateAmount);
 	},
-	trigger: 'updategoal'
+	slashJSON: {
+		name: 'updategoal',
+		description: 'Update an existing goal',
+		options: [
+			{
+				name: 'name',
+				description: 'The name from the goal',
+				type: 3,
+				required: true,
+				focused: false
+			},
+			{
+				name: 'update',
+				description: 'The updated number',
+				type: 4,
+				required: true,
+				focused: false
+			}
+		]
+	}
 };
 
 const updateGoalMessage = async (interaction, doesExist, updateAmount) => {

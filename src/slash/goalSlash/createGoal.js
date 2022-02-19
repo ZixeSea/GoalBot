@@ -27,5 +27,24 @@ module.exports = {
 					'warn'
 				);
 	},
-	trigger: 'creategoal'
+	slashJSON: {
+		name: 'creategoal',
+		description: 'Create a new goal',
+		options: [
+			{
+				name: 'name',
+				description: 'The name for the goal',
+				type: 3,
+				required: true,
+				focused: false
+			},
+			{
+				name: 'goal',
+				description: 'The goal amount (in $)',
+				type: 4,
+				required: true,
+				focused: false
+			}
+		]
+	}
 };

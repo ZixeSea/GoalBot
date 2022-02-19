@@ -18,5 +18,17 @@ module.exports = {
 		interaction.createFollowup(makeEmbed(_id, goal, current)) &&
 			GoalBot.logger(GoalBot, `Show goal succeeded, started by ${interaction.member.username} (name: ${goalName}).`);
 	},
-	trigger: 'showgoal'
+	slashJSON: {
+		name: 'showgoal',
+		description: 'Show info baout a goal',
+		options: [
+			{
+				name: 'name',
+				description: 'The name from the goal',
+				type: 3,
+				required: true,
+				focused: false
+			}
+		]
+	}
 };

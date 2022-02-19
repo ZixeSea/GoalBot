@@ -3,7 +3,6 @@ const config = require('./config');
 const { readdirSync } = require('fs');
 const { join } = require('path');
 const DB = require('../database/DB');
-const createSlash = require('../utils/createSlash');
 const { logger } = require('../utils/additional');
 
 class GoalBot {
@@ -105,12 +104,24 @@ const crashHandler = (reason) => {
 	console.error(reason);
 };
 
-module.exports = GoalBot;
-
-function addSlashCommands() {
+async function addSlashCommands() {
 	this.logger(this, 'Slash command adder has been started.');
 	if (!this.client.guilds.get(this.config.guild))
-		return this.logger(this, 'Slash command adder failed, guild not found.');
+		return this.logger(this, 'Slash command adder failed, guild(s) not found.');
 
-	return createSlash(this);
+	let currentSlashNames = [];
+	const currentSlash = await this.client.guilds.get(this.config.guild).getCommands();
+	currentSlash.forEach((s) => {
+		currentSlashNames.push(s.name);
+	});
+
+	const missingSlash = this.cmds.filter((c) => !currentSlashNames.includes(c.slashJSON.name));
+	if (missingSlash.length <= 0) return this.logger(this, 'No missing slash commands.');
+
+	missingSlash.forEach((m) => {
+		this.logger(this, `Added ${m.slashJSON.name}, this slash command was missing.`);
+		this.client.createGuildCommand(this.config.mainServer, m.slashJSON, 1);
+	});
 }
+
+module.exports = GoalBot;

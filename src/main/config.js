@@ -48,6 +48,8 @@ config.dbOptions = options.db;
 
 config.modRole = options.bot.modRole;
 
+config.showForEveryone = options.bot.showForEveryone;
+
 config.guild = options.bot.guild;
 
 config.paths = {

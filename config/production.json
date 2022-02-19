@@ -2,6 +2,7 @@
 	"bot": {
 		"token": "token here",
 		"modRole": [ "role(s)", "id", "here" ],
+		"showForEveryone": true,
 		"guild": "guild id here"
 	},
 	"db": {

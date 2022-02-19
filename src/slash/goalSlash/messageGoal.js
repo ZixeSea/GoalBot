@@ -11,8 +11,7 @@ module.exports = {
 		const newChannelId = !options ? undefined : await options.find((o) => o.name === 'channel').value;
 
 		const doesExist = await GoalBot.DB.getDataById('goal', goalName);
-		if (!doesExist)
-			return interaction.createFollowup(`There isn't a goal named **${goalName}**, pick another name.`);
+		if (!doesExist) return interaction.createFollowup(`There isn't a goal named **${goalName}**, pick another name.`);
 
 		const goalChannel = interaction.channel.guild.channels.get(newChannelId);
 		if (goalChannel.type !== GoalBot.erisConst.ChannelTypes.GUILD_TEXT)

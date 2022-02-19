@@ -77,12 +77,7 @@ class DB {
 	async connect() {
 		return await connect(`mongodb://${this.dbOptions.host}/${this.dbOptions.db}`, this.dbOptions.mongoOptions)
 			.then(() => {
-				this.Helper.logger(
-					this.Helper,
-					`Connected to the database (${this.dbOptions.db}).`,
-					undefined,
-					'MongoDB'
-				);
+				this.Helper.logger(this.Helper, `Connected to the database (${this.dbOptions.db}).`, undefined, 'MongoDB');
 				return true;
 			})
 			.catch((err) => {

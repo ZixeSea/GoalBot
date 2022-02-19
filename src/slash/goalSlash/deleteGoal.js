@@ -8,15 +8,11 @@ module.exports = {
 		const goalName = !options ? undefined : await options.find((o) => o.name === 'name').value.toLowerCase();
 
 		const doesExist = await GoalBot.DB.getDataById('goal', goalName);
-		if (!doesExist)
-			return interaction.createFollowup(`There isn't a goal named **${goalName}**, pick another name.`);
+		if (!doesExist) return interaction.createFollowup(`There isn't a goal named **${goalName}**, pick another name.`);
 
 		GoalBot.DB.deleteGoal(goalName)
 			? interaction.createFollowup(`The goal named **${goalName}** has been deleted.`) &&
-				GoalBot.logger(
-					GoalBot,
-					`Delete goal succeeded, started by ${interaction.member.username} (name: ${goalName}).`
-				)
+				GoalBot.logger(GoalBot, `Delete goal succeeded, started by ${interaction.member.username} (name: ${goalName}).`)
 			: interaction.createFollowup(`Failed to delete the goal named **${goalName}**.`) &&
 				GoalBot.logger(
 					GoalBot,

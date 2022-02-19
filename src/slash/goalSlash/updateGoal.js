@@ -11,8 +11,7 @@ module.exports = {
 		const updateAmount = !options ? undefined : await options.find((o) => o.name === 'update').value;
 
 		const doesExist = await GoalBot.DB.getDataById('goal', goalName);
-		if (!doesExist)
-			return interaction.createFollowup(`There isn't a goal named **${goalName}**, pick another name.`);
+		if (!doesExist) return interaction.createFollowup(`There isn't a goal named **${goalName}**, pick another name.`);
 
 		if (doesExist.goal < updateAmount || updateAmount < 0)
 			return interaction.createFollowup(

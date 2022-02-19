@@ -13,21 +13,17 @@ module.exports = {
 			return interaction.createFollowup(`There is already a goal named **${goalName}**, pick another name.`);
 
 		GoalBot.DB.createGoal(goalName, goalAmount)
-			? interaction.createFollowup(
-					`New goal created under the name **${goalName}** and goal **$${goalAmount}**.`
-				) &&
+			? interaction.createFollowup(`New goal created under the name **${goalName}** and goal **$${goalAmount}**.`) &&
 				GoalBot.logger(
 					GoalBot,
-					`Create goal succeeded, started by ${interaction.member
-						.username} (name: ${goalName}, goal: ${goalAmount}).`
+					`Create goal succeeded, started by ${interaction.member.username} (name: ${goalName}, goal: ${goalAmount}).`
 				)
 			: interaction.createFollowup(
 					`Failed to created the new goal with name **${goalName}** and goal **$${goalAmount}**.`
 				) &&
 				GoalBot.logger(
 					GoalBot,
-					`Create goal failed, started by ${interaction.member
-						.username} (name: ${goalName}, goal: ${goalAmount}).`,
+					`Create goal failed, started by ${interaction.member.username} (name: ${goalName}, goal: ${goalAmount}).`,
 					'warn'
 				);
 	},

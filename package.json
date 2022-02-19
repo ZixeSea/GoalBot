@@ -1,6 +1,6 @@
 {
 	"name": "goalbot",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A small Discord bot created to create and manage any type of money goal and display them through messages",
 	"homepage": "https://github.com/ZixeSea/GoalBot",
 	"author": {

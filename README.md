@@ -1,13 +1,16 @@
 <h1>GoalBot</h1>
 <strong>Creating and managing goals made easy!</strong><br>
 <a href="https://discord.com/invite/bZt8WkS">
-  <img src="https://discord.com/api/guilds/98834803738054656/embed.png" alt="discord - users online"/>
+  <img src="https://discord.com/api/guilds/98834803738054656/embed.png" alt="discord server"/>
 </a>
-<a href="https://github.com/ServerStats-INC/eris">
+<a href="https://www.npmjs.com/package/eris">
   <img src="https://img.shields.io/badge/Eris-v0.16.1-blue.svg" alt="Eris Badge"/>
 </a>
-<a href="https://github.com/ServerStats-INC/ServerStatsBot">
-  <img src="https://img.shields.io/badge/Version-1.0.0-green.svg" alt="Version Badge"/>
+<a href="https://github.com/ZixeSea/GoalBot">
+  <img src="https://img.shields.io/badge/Version-1.0.1-green.svg" alt="Version Badge"/>
+</a>
+<a href="https://github.com/ZixeSea/SteamIdler/blob/master/LICENSE.md">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="Version Badge"/>
 </a>
 
 ---
@@ -30,7 +33,7 @@ This project has been created after a request from [Brasscoin](https://www.youtu
 [pako](https://www.npmjs.com/package/pako) - zlib port to javascript, very fast!
 
 ### **License**
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/ZixeSea/GoalBot/blob/main/LICENSE) file for details (deleting the license file after forking isn't allowed).
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/ZixeSea/GoalBot/blob/main/LICENSE) file for details (deleting and/or modifying the license file after forking isn't allowed).
 
 ---
 
@@ -87,11 +90,12 @@ git clone https://github.com/ZixeSea/GoalBot.git
 
 ## **Config**
 ### **Bot config**
-You can find the config file in the folder that was created in the previous step (["this one"](###Get-code)), it should be in the folder "config" and the change the file "production.json".\
+You can find the config file in the folder that was created in the previous step (["this one"](###Get-code)), it should be in the folder "config" and there change the file "production.json".\
 
 In the bot config file, there are 5 really important things that must be changed first, here is what they mean\
 `token` The token you got from the discord dashboard\
 `modRole` A list of role IDs that can create, update and delete goals\
+`showForEveryone` If you set this to false, only mod roles can use **/show**\
 `guild` The guild ID you're going to use the bot in\
 `db` Any lower case name (**can't be changed afterward**)\
 `host` IP or hostname where the Mongo DB is hosted (**if on the same system use 127.0.0.1**)\
@@ -103,6 +107,7 @@ Hereunder is an example config:
 	"bot": {
 		"token": "123",
 		"modRole": [ "123", "123" ],
+		"showForEveryone": true,
 		"guild": "123"
 	},
 	"db": {

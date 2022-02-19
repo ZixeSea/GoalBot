@@ -5,7 +5,7 @@ module.exports = {
 		if (!GoalBot.config.showForEveryone) {
 			const donatorRolesMember = interaction.member.roles.filter((r) => GoalBot.config.modRole.includes(r));
 			if (donatorRolesMember.length <= 0)
-				return interaction.createFollowup("You don't have to required role(s) to run the command.");
+				return interaction.createFollowup("You don't have the required role(s) to run the command.");
 		}
 
 		const options = interaction.data.options;

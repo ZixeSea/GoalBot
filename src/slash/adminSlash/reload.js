@@ -2,7 +2,7 @@ module.exports = {
 	run: async ({ GoalBot, interaction }) => {
 		const donatorRolesMember = interaction.member.roles.filter((r) => GoalBot.config.modRole.includes(r));
 		if (donatorRolesMember.length <= 0)
-			return interaction.createFollowup("You don't have to required role(s) to run the command.");
+			return interaction.createFollowup("You don't have the required role(s) to run the command.");
 
 		GoalBot.cmds.forEach((c) => {
 			GoalBot.logger(GoalBot, `Edited ${c.slashJSON.name}, should now be up to date.`);
